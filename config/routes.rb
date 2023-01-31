@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get '/sign_in', to: 'sessions#new'
   get '/sign_out', to: 'sessions#destroy'
-  resource :sessions, only: [:create]
+  resources :sessions, only: [:create]
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
