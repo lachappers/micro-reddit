@@ -9,6 +9,8 @@
     <%= @post.description %>
   </p>
 
+  <%= render partial: 'likes/button', locals: { likeable: @post } %>
+
   <p>
       <strong>Comments:</strong>
     <%= render @post.comments.where(parent_id: nil).includes(:user).order(id: :desc) %>
