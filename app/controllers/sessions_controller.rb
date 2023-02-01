@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to posts_path
     else
       flash.now[:notice] = "Invalid username"
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

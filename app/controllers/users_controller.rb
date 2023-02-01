@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       redirect_to posts_path
     else
       flash.now[:notice] = @user.errors.full_messages.to_sentence
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
